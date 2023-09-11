@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   toolbarTitle: {
     flexGrow: 1,
   },
+  /* CSP: font-src 'self' data:; style-src 'self'; */
   link: {
     margin: theme.spacing(1, 1.5),
   },
