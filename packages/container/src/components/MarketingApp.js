@@ -1,4 +1,4 @@
-import { mount as marketingPagesMount } from 'marketing/MarketingPages'
+import { mount } from 'marketing/MarketingPages'
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
@@ -7,7 +7,7 @@ export default () => {
     const history = useHistory();
 
     useEffect(() => {
-        marketingPagesMount(ref.current, {
+        const { onParentNavigate} = mount(ref.current, {
             onNavigate: ({ pathname: nextPathname }) => {
                 const { pathname } = history.location;
                 if (pathname !== nextPathname) {
@@ -15,6 +15,8 @@ export default () => {
                 }
             },
         });
+
+        history.listen(onParentNavigate);
     }, []);
 
     return <dif ref={ref} />
