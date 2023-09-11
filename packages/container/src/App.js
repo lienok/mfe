@@ -1,7 +1,8 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {StylesProvider, createGenerateClassName} from '@material-ui/core';
-import MarketingApp from "./components/MarketingApp";
+
+import MarketingApp from './components/MarketingApp';
 import AuthApp from './components/AuthApp';
 import Header from './components/Header';
 
