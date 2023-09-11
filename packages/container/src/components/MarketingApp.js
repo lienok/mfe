@@ -19,5 +19,5 @@ export default () => {
         history.listen(onParentNavigate);
     }, []);
 
-    return <dif ref={ref} />
+    return <div ref={ref} />
 }
