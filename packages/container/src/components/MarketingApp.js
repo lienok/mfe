@@ -17,7 +17,10 @@ export default () => {
             },
         });
 
-        history.listen(onParentNavigate);
+        // Check if onParentNavigate is defined before using it
+        if (onParentNavigate) {
+            history.listen(onParentNavigate);
+        }
     }, []);
 
     return <div ref={ref} />
